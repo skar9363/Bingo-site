@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>彬Go的个人网站 - 前端开发工程师|前端开发主管</title>
+	<style>
+		html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,audio,canvas,details,figcaption,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,summary,time,video{border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;margin:0;padding:0;}body{line-height:1;}article,aside,dialog,figure,footer,header,hgroup,nav,section,blockquote{display:block;}nav ul{list-style:none;}ol{list-style:decimal;}ul{list-style:disc;}ul ul{list-style:circle;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:none;}ins{text-decoration:underline;}del{text-decoration:line-through;}mark{background:none;}abbr[title],dfn[title]{border-bottom:1px dotted #000;cursor:help;}table{border-collapse:collapse;border-spacing:0;}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}input[type=submit],input[type=button],button{margin:0!important;padding:0!important;}input,select,a img{vertical-align:middle;}
+		
+		html, body {height:auto;}
+		body {background:url('http://bingo929.qiniudn.com/imgs/noie_bg.jpg') no-repeat center top;font-family:'Microsoft YaHei', simsun;}
+		.banner {position:relative;width:70%;_width:800px;min-width:700px;height:auto;_height:367px;margin:8% auto 0;background:url('http://bingo929.qiniudn.com/imgs/noie-banner_bg.png') repeat left top;_background:none;}
+		.banner h1, .banner p {display:none;}
+		.banner img {_width:800px;height:auto;_height:367px;}
+		.banner img.l {width:33%;}
+		.banner img.r {width:56%;}
+		p.download {display:block;position:absolute;top:73%;_top:290px;left:44%;_left:340px;width:400px;height:40px;}
+		p.download a {float:left;width:130px;height:100%;line-height:40px;padding-left:35px;_background:none;}
+		p.download a:link, p.download a:visited {color:#fff;text-decoration:none;}
+		p.download a:hover {color:#f00;text-decoration:underline;}
+		.chrome {margin-right:20px;background:url('http://bingo929.qiniudn.com/imgs/icon_chrome.png') no-repeat left top;}
+		.ff {background:url('http://bingo929.qiniudn.com/imgs/icon_ff.png') no-repeat left top;}
+		.img_gte7 {_display:none;}
+	</style>
+	<script>
+	BINGO929 = {staticURI:'http://bingo929.qiniudn.com/'};
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?902ec3ba9a96af529c8f03acbc0368ff";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+</head>
+<body>
+	<div class="banner">
+		<h1>IE9以下浏览器禁止访问本站</h1>
+		<p>
+			神马？！骚年！！你竟然还在用低端IE浏览器？！这种”高级场所”不欢迎IE9以下的”屌丝浏览器”哦...赶快更换超炫、劲爽、屌炸天的标准浏览器吧！让你一秒变土豪！！！
+		</p>
+		<img class="img_gte7 l" src="http://bingo929.qiniudn.com/imgs/noie-q.png" />
+		<img class="img_gte7 r" src="http://bingo929.qiniudn.com/imgs/noie-word.png" />
+		<!--[if lte IE 6]><img src="http://bingo929.qiniudn.com/imgs/noie6.jpg" /><![endif]-->
+		
+		<p class="download">
+			<a href="http://www.google.cn/intl/zh-CN/chrome/browser/index.html" target="_blank" class="chrome" title="下载谷歌Chrome浏览器">Google Chrome</a>
+			<a href="http://www.firefox.com.cn/download/" target="_blank" class="ff" title="下载FireFox火狐浏览器">Mozilla FireFox</a>
+		</p>
+	</div>
+	<script>
+		window.onload = move;
+
+		function move() {
+			if (typeof document.body.style.maxHeight === 'undefined') return;
+
+			var y = 0;
+			var step = 100;
+			var height = 1316;
+			var winHeight = document.documentElement.clientHeight;
+			var move = winHeight - height;
+
+			var timer = setInterval(function() {
+				y -= 1;
+
+				if (y < move) {
+					clearInterval(timer);
+					timer = null;
+				} else {
+					document.body.style.backgroundPosition = 'center ' + y + 'px';
+				}
+			}, step);
+		}
+	</script>
+</body>
+</html>
