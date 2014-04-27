@@ -66,7 +66,9 @@ body.s1920 .img_print_yellow {background-image:url('http://bingo929.qiniudn.com/
 body.s1920 .img_skills {background-image:url('http://bingo929.qiniudn.com/imgs/skills_1920.png');}
 body.s1920 .img_ink_dots_far {background-image:url('http://bingo929.qiniudn.com/imgs/ink_dots_far_1920.png');}
 body.s1920 .img_ink_dots_close {background-image:url('http://bingo929.qiniudn.com/imgs/ink_dots_close_1920.png');}
+/* Chrome 34版本后对以下GPU硬件加速渲染支持不好，导致更卡，暂时取消
 #about_bingo .gpu {-webkit-transform:scale(1) translateZ(0);-webkit-backface-visibility:hidden;-webkit-perspective:1000;}
+*/
 /*== 根据不同分辨率输出不同背景图 =end=*/
 
 		#person_resume, #skills, #cantact_me {display:block;position:relative;width:100%;overflow:hidden;}

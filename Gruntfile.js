@@ -3,6 +3,16 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    connect: {
+    	server: {
+    		options: {
+    			port: 9000,
+    			base: 'src',
+    			hostname: 'localhost',
+    			keepalive: true
+    		}
+    	}
+    },
     concat: {
       options: {
         separator: ';'
@@ -47,12 +57,16 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-htmlmin');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  // Default task(s).
-  grunt.registerTask('default', ['concat', 'htmlmin', 'cssmin', 'uglify']);
+
+	// Server task
+	grunt.registerTask('server',['connect']);
+	// Default task(s).
+	grunt.registerTask('default', ['concat', 'htmlmin', 'cssmin', 'uglify']);
 
 };
